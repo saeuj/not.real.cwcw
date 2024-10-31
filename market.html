@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신선해 시장</title>
+    <style>
+        /* 기본 스타일 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 배경 색상 설정 */
+        body {
+            background-color: #f0fff0; /* 연한 녹색 배경 */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 헤더 스타일 */
+        header {
+            background-color: #12763d; /* 진한 초록색 */
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* 내비게이션 바 스타일 */
+        nav {
+            background-color: #000000; /* 중간 초록색 */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            font-size: 18px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #184418;
+        }
+
+        /* 메인 콘텐츠 스타일 */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* 개별 제품 카드 스타일 */
+        .product-card {
+            background-color: #ffffff; /* 흰색 배경 */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2); /* 초록색 그림자 */
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px); /* 호버 시 약간 상승 */
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #1d831d; /* 연두색 하단 테두리 */
+        }
+
+        .product-card h3 {
+            color: #064622; /* 초록색 텍스트 */
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .product-card .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2d8f59; /* 중간 초록색 텍스트 */
+        }
+
+        .product-card button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #0b5f0b; /* 밝은 초록색 */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .product-card button:hover {
+            background-color: #2e8b57; /* 진한 초록색으로 변경 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 헤더 섹션 -->
+    <header>신선한 채소와 과일 주문은 신선해 시장</header>
+
+    <!-- 내비게이션 바 -->
+    <nav>
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">신상품</a></li>
+            <li><a href="#">인기 상품</a></li>
+            <li><a href="#">카테고리</a></li>
+            <li><a href="#">장바구니</a></li>
+            <li><a href="#">내정보</a><li>
+        </ul>
+    </nav>
+
+    <!-- 제품 그리드 섹션 -->
+    <section class="product-grid">
+        <!-- 제품 카드 1 -->
+        <div class="product-card">
+            <img src="images/ekdrms.webp" alt="상품 이미지">
+            <h3>유기농 당근</h3>
+            <p>신선하고 건강한 유기농 당근입니다.</p>
+            <div class="price">₩5,000</div>
+            <button>장바구니에 담기</button>
+        </div>
+
+        <!-- 제품 카드 2 -->
+        <div class="product-card">
+            <img src="images/didvk.jpg" alt="상품 이미지">
+            <h3>양파</h3>
+            <p>썰면 눈이 매운 양파</p>
+            <div class="price">₩3,000</div>
+            <button>장바구니에 담기</button>
+        </div>
+
+        <!-- 제품 카드 3 -->
+        <div class="product-card">
+            <img src="images/qocn.jpg" alt="상품 이미지">
+            <h3>배추</h3>
+            <p>강원도에서 재배한 고랭지 배추</p>
+            <div class="price">₩5,500</div>
+            <button>장바구니에 담기</button>
+        </div>
+    </section>
+
+</body>
+</html>
